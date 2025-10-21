@@ -1,7 +1,7 @@
 """
 COMP 163 - Project 1: Character Creator & Saving/Loading
-Name: [Your Name Here]
-Date: [Date]
+Name: [Amya Ratcliff Prince]
+Date: [October 20, 2025]
 
 AI Usage: [Document any AI assistance used]
 Example: AI helped with file I/O error handling logic in save_character function
