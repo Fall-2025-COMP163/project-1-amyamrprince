@@ -2,7 +2,7 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=21189713&assignment_repo_type=AssignmentRepo)
 # COMP 163 - Project 1: Character Creator & Chronicles
 # 🎯 Project Overview
-
+TESTING OUT FIRST COMMIT
 Build a text-based RPG character creation and story progression system that demonstrates mastery of functions and file I/O operations.
 
 # Required Functions 
