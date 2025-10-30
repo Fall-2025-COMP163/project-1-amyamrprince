@@ -136,8 +136,8 @@ def load_character(filename):
     
     #checks if file exist before trying to open it 
     if not os.path.exists(filename):
-         print("File not found")
-         return None
+        print("File not found")
+        return None
         
 #readnames the data from file 
     key_translation = {
@@ -161,18 +161,19 @@ def load_character(filename):
         #Only process lines that contain a colon (":") separator
         if ":" in line:
             key, value = line.split(":",1) # Split into key and value at the first colon
-        
+            key = key.strip()
+            value = value.strip().lstrip()
         #If the key from the file matches one of the expected labels, translate it
             if key in key_translation:
                 translate = key_translation[key]
                 # Convert numeric fields from strings to integers
                 if translate in ["level", "strength", "magic", "health", "gold"]:
-                 if value.isdigit():
-                     value = int(value)
-                 else:
-                    value = 0
+                    if value.isdigit():
+                        value = int(value)
+                    else:
+                        value = 0
             # Add the mapped key and its cleaned value to the dictionary   
-            character_data[translate] = value
+                character_data[translate] = value
 
     return character_data
 
