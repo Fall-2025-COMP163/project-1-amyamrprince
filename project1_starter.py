@@ -214,7 +214,7 @@ def level_up(character):
     Modifies the character dictionary directly
     Returns: None
     """
-    
+
     #increases character level by 1
     character['level'] +=1
     #boost stats when leveling up 
@@ -235,7 +235,7 @@ def level_up(character):
     
 
 # Main program area (optional - for testing your functions)
-if __name__ == "__main__":
+#if __name__ == "__main__":
    ##print("Test your functions here!")
     
     # Example usage:
