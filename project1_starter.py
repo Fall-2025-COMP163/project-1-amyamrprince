@@ -20,8 +20,7 @@ def create_character(name, character_class):
     char = create_character("Aria", "Mage")
     # Should return: {"name": "Aria", "class": "Mage", "level": 1, "strength": 5, "magic": 15, "health": 80, "gold": 100}
     """
-   
-
+    
      #starting amount of gold for a new character
     character_gold = 0 
     #starting level for all new characters 
@@ -40,9 +39,11 @@ def create_character(name, character_class):
                        "gold": character_gold}
     return character_dictionary# returns completed character dictionary into the main program
 
-
-    
-
+# AI Usage: 
+# helped me organize and balance my stat formulas
+# for each class (Warrior, Mage, Cleric, Rogue) and make sure
+# all the values stayed whole numbers for easier testing.
+   
 def calculate_stats(character_class, level):
     """
     Calculates base stats based on class and level
@@ -59,7 +60,7 @@ def calculate_stats(character_class, level):
     base_stat = 5 
     #Each stat will be multiplyed by the level 
     #points * level will then be used for calculations in condotional statements 
-    strength_point = 5 * level #fix calculations
+    strength_point = 5 * level
     magic_point = 10 * level 
     health_point = 8 * level 
     # if character class is "Warriors", run this block
@@ -100,7 +101,6 @@ def save_character(character, filename):
     Health: [health]
     Gold: [gold]
     """
-    
 
     #gets folder part of path if any
     folder_path = os.path.dirname(filename)
@@ -112,7 +112,7 @@ def save_character(character, filename):
     with open(filename, "w") as file_object:
         #writes each piecce of character information on it own line
         #the f-string inserts the value from the character dictionary
-        file_object.write(f"Character Name: {character['name']}\n")#ask teacher about importing write
+        file_object.write(f"Character Name: {character['name']}\n")
         file_object.write(f"Class: {character['class']}\n")
         file_object.write(f"Level: {character['level']}\n")
         file_object.write(f"Strength: {character['strength']}\n")
@@ -121,8 +121,9 @@ def save_character(character, filename):
         file_object.write(f"Gold: {character['gold']}\n")
     return True 
 
-
-    
+# AI Usage
+# to the correct dictionary keys using a key_map. This was needed because
+# I was getting a NameError when the file used "Character Name" instead of "name".
 
 def load_character(filename):
     """
@@ -135,7 +136,7 @@ def load_character(filename):
         print("File not found")
         return None
         
-#readnames the data from file 
+    #makes sure data from dictonary gets updated to this format
     key_translation = {
         "Character Name": "name",
         "Class": "class",
@@ -176,9 +177,6 @@ def load_character(filename):
 
     return character_data
 
-
-    
-
 def display_character(character):
     """
     Prints formatted character sheet
@@ -206,6 +204,9 @@ def display_character(character):
     print(f"Gold: {character['gold']}")
     return None
     
+# AI Usage: 
+# helped me structure the stat increase pattern
+# so each class’s level-up feels balanced and follows my design plan.
  
 def level_up(character):
     """
@@ -234,7 +235,7 @@ def level_up(character):
     
 
 # Main program area (optional - for testing your functions)
-#if __name__ == "__main__":
+if __name__ == "__main__":
    ##print("Test your functions here!")
     
     # Example usage:
@@ -247,6 +248,6 @@ def level_up(character):
     #if loaded_character is not None:
         #print("Character loaded successfully!")
         #print(loaded_character)
-    #else#:
+    #else:
         #print("Failed to load character.")
     #print(char)

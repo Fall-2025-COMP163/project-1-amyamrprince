@@ -2,8 +2,43 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=21189713&assignment_repo_type=AssignmentRepo)
 # COMP 163 - Project 1: Character Creator & Chronicles
 # 🎯 Project Overview
-TESTING OUT FIRST COMMIT
+
 Build a text-based RPG character creation and story progression system that demonstrates mastery of functions and file I/O operations.
+
+#Game Concept: This RPG world lets players create characters, choose a class, and level up through simple adventures that build strength, magic, and health.
+
+
+#Design Choices: 
+I based my stat formulas on the idea that each class should feel unique but still balanced.
+
+-Warriors: High Strength, low Magic, and high Health — built for close combat and defense.
+
+-Mages: Low Strength, high Magic, and medium Health — focused on powerful spells instead of physical attacks.
+
+-Rogues: Medium Strength, medium Magic, and low Health — fast, risky fighters who rely on speed and precision.
+
+-Clerics: Medium Strength, high Magic, and high Health — balanced characters that can fight and heal.
+
+#Bonus Creative Features:
+
+-Level-Up Reward: Each time a character levels up, they automatically gain extra gold based on their level.
+
+
+#AI Usage: 
+-used to helpe me organize and balance my stat formulas for each class (Warrior, Mage, Cleric, and Rogue).
+
+-used to explain how to structure my load_character() function using loops, string methods, and a key map instead of multiple if statements.
+
+-Used to polish my writing for the read me and docstrings so my explanations were clear and complete.
+-Gave me feedback on how to clearly explain my code and structure my documentation.
+
+#How to Run: 
+-Open project1_starter.py in your code editor.
+-Scroll down to the main program area and uncomment lines 240–251.
+-Once those lines are uncommented, the program will automatically run when executed.
+-You can run it by clicking Run in your editor.
+
+
 
 # Required Functions 
 Complete these functions in project1_starter.py:
